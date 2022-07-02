@@ -1,2 +1,7 @@
-const test = 4;
-console.log(test);
+export const evenOrOdd = (number) => {
+  if (number % 2 === 0) {
+    return "Even";
+  } else {
+    return "Odd";
+  }
+};
