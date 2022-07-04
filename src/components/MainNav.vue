@@ -21,6 +21,9 @@
             </li>
           </ul>
         </nav>
+        <div class="flex items-center h-full ml-auto">
+          <action-button />
+        </div>
       </div>
     </div>
   </header>
