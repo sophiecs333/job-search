@@ -13,6 +13,7 @@
               v-for="menuItem in menuItems"
               :key="menuItem"
               class="h-full ml-9 first:ml-0"
+              data-test="main-nav-list-item"
             >
               <a href="" class="flex items-center h-full py-2.5">{{
                 menuItem
@@ -26,8 +27,12 @@
 </template>
 
 <script>
+import ActionButton from "@/components/ActionButton.vue";
 export default {
   name: "MainNav",
+  components: {
+    ActionButton,
+  },
   data() {
     return {
       company: "Poogle Careers",
