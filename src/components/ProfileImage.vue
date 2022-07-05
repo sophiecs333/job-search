@@ -3,13 +3,12 @@
 </template>
 
 <script>
-import { defineComponent } from "@vue/composition-api";
-
 export default {
   name: "ProfileImage",
   data() {
     return {
-      imageLink: "@/assets/deutsche_akademie.png",
+      imageLink:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlWOiXypqMnk_iFcn1zyOP-sspRJsRwLrSvg&usqp=CAU",
     };
   },
 };
