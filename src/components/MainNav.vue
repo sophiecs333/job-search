@@ -26,6 +26,7 @@
           <action-button
             v-else
             text="Sign in"
+            type="primary"
             data-test="login-button"
             v-on:click="loginUser()"
           />
