@@ -13,7 +13,6 @@ describe("MainNav", () => {
     const navigationMenuItems = wrapper.findAll(
       "[data-test='main-nav-list-item']"
     );
-    console.log(navigationMenuItems);
     const navigationMenuTexts = navigationMenuItems.map((item) => item.text());
     expect(navigationMenuTexts).toEqual([
       "Teams",
@@ -38,16 +37,25 @@ describe("MainNav", () => {
     it("displays user profile picture", async () => {
       const wrapper = shallowMount(MainNav);
       let profileImage = wrapper.find("[data-test='profile-image']");
-      ({ name: "ProfileImage" });
       expect(profileImage.exists()).toBe(false);
 
       const loginButton = wrapper.find("[data-test='login-button']");
-      ({ name: "ActionButton" });
       await loginButton.trigger("click");
 
       profileImage = wrapper.find("[data-test='profile-image']");
-      ({ name: "ProfileImage" });
       expect(profileImage.exists()).toBe(true);
+    });
+
+    it("displays subnavigation menu with additional information", async () => {
+      const wrapper = shallowMount(MainNav);
+      let subnav = wrapper.find("[data-test='subnav']");
+      expect(subnav.exists()).toBe(false);
+
+      const loginButton = wrapper.find("[data-test='login-button']");
+      await loginButton.trigger("click");
+
+      subnav = wrapper.find("[data-test='subnav']");
+      expect(subnav.exists()).toBe(true);
     });
   });
 });

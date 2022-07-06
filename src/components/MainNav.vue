@@ -7,8 +7,9 @@
         <a :href="url" class="flex items-center h-full text-xl">{{
           company
         }}</a>
+
         <nav class="h-full ml-12">
-          <ul class="flex h-full p-0 m-0">
+          <ul class="flex h-full p-0 m-0 list-none">
             <li
               v-for="menuItem in menuItems"
               :key="menuItem"
@@ -21,18 +22,19 @@
             </li>
           </ul>
         </nav>
+
         <div class="flex items-center h-full ml-auto">
           <profile-image v-if="isLoggedIn" data-test="profile-image" />
           <action-button
             v-else
             text="Sign in"
-            type="primary"
             data-test="login-button"
-            v-on:click="loginUser()"
+            @click="loginUser()"
           />
         </div>
       </div>
-      <subnav v-if="isloggedIn" />
+
+      <subnav v-if="isloggedIn" data-test="subnav" />
     </div>
   </header>
 </template>

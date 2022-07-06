@@ -12,6 +12,7 @@ describe("ActionButton", () => {
     });
     expect(wrapper.text()).toMatch("I'm so clickable");
   });
+
   it("applies on of several styles to button", () => {
     const wrapper = mount(ActionButton, {
       props: {

@@ -1,6 +1,6 @@
 <template>
-  <button :class="{ primary: primary }">
-    {{ Text }}
+  <button :class="buttonClass">
+    {{ text }}
   </button>
 </template>
 
