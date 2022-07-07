@@ -16,7 +16,7 @@
               class="h-full ml-9 first:ml-0"
               data-test="main-nav-list-item"
             >
-              <a href="" class="flex items-center h-full py-2.5">{{
+              <a href="/" class="flex items-center h-full py-2.5">{{
                 menuItem
               }}</a>
             </li>
@@ -29,12 +29,12 @@
             v-else
             text="Sign in"
             data-test="login-button"
-            @click="loginUser()"
+            @click="loginUser"
           />
         </div>
       </div>
 
-      <subnav v-if="isloggedIn" data-test="subnav" />
+      <subnav v-if="isLoggedIn" data-test="subnav" />
     </div>
   </header>
 </template>
@@ -54,7 +54,7 @@ export default {
   data() {
     return {
       company: "Poogle Careers",
-      url: "http://careers.google.com",
+      url: "https://careers.google.com",
       menuItems: [
         "Teams",
         "Locations",

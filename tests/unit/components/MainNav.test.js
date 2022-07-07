@@ -28,7 +28,6 @@ describe("MainNav", () => {
     it("prompts user to sign in", () => {
       const wrapper = shallowMount(MainNav);
       const loginButton = wrapper.find("[data-test='login-button']");
-      ({ name: "ActionButton" });
       expect(loginButton.exists()).toBe(true);
     });
   });
