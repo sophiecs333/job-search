@@ -1,6 +1,9 @@
 <template>
-  <section>
-    <h1 class="font-bold tracking-tighter text-8xl mb-14">
+  <section class="mb-16">
+    <h1
+      class="font-bold tracking-tighter text-8xl mb-14"
+      data-test="action-phrase"
+    >
       <span :class="actionClasses">{{ action }}</span>
       <br />
       for everyone
@@ -23,10 +26,7 @@ export default {
   computed: {
     actionClasses() {
       return {
-        build: this.action === "Build",
-        create: this.action === "Create",
-        design: this.action === "Design",
-        code: this.action === "Code",
+        [this.action.toLowerCase()]: true,
       };
     },
   },
