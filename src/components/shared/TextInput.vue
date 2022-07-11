@@ -9,7 +9,6 @@
 </template>
 
 <script>
-import { stringify } from "postcss";
 export default {
   name: "TextInput",
   props: {
@@ -23,9 +22,9 @@ export default {
       required: true,
     },
   },
+  emits: ["update:modelValue"],
   methods: {
     handleInput($event) {
-      this.value = $event.target.value;
       this.$emit("update:modelValue", $event.target.value);
     },
   },
