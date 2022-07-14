@@ -13,7 +13,7 @@
 
             <div class="flex flex-row align-middle">
               <div class="mr-5">
-                <span>Bobo</span>
+                <span>Poogle</span>
               </div>
 
               <div>
