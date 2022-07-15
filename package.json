@@ -7,15 +7,19 @@
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit --coverage",
     "lint": "vue-cli-service lint",
-    "test:watch": "vue-cli-service test:unit --watch"
+    "test:watch": "vue-cli-service test:unit --watch",
+    "backend": "npx json-server --watch db.json"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
     "@fortawesome/vue-fontawesome": "^3.0.0-5",
     "autoprefixer": "^10",
+    "axios": "^0.27.2",
     "core-js": "^3.8.3",
+    "json": "^11.0.0",
     "postcss": "^8",
+    "server": "^1.0.37",
     "tailwindcss": "^3",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3"
