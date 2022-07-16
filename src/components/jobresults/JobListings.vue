@@ -65,14 +65,15 @@ export default {
       return nextPage <= maxPage ? nextPage : undefined;
     },
     displayedJobs() {
-      const pageNumber = this.currentPage();
+      const pageNumber = this.currentPage;
       const firstJobIndex = (pageNumber - 1) * 10;
       const lastJobIndex = pageNumber * 10;
       return this.jobs.slice(firstJobIndex, lastJobIndex);
     },
   },
   async mounted() {
-    const response = await axios.get("http://localhost:3000/jobs");
+    const baseUrl = process.env.VUE_APP_API_URL;
+    const response = await axios.get(`${baseUrl}/jobs`);
     this.jobs = response.data;
   },
 };
