@@ -33,7 +33,7 @@
             v-else
             text="Sign in"
             data-test="login-button"
-            @click="loginUser"
+            @click="LOGIN_USER()"
           />
         </div>
       </div>
@@ -44,6 +44,8 @@
 </template>
 
 <script>
+import { mapMutations, mapState } from "vuex";
+
 import ActionButton from "@/components/shared/ActionButton.vue";
 import ProfileImage from "@/components/navigation/ProfileImage.vue";
 import Subnav from "@/components/navigation/Subnav.vue";
@@ -82,9 +84,10 @@ export default {
     ...mapState(["isLoggedIn"]),
   },
   methods: {
-    loginUser() {
-      this.$store.commit(LOGIN_USER);
-    },
+    // LOGIN_USER() {
+    //   this.$store.commit(LOGIN_USER);
+    // },
+    ...mapMutations([LOGIN_USER]),
   },
 };
 </script>
