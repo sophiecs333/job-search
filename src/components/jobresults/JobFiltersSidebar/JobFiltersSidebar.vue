@@ -10,7 +10,8 @@
         </div>
       </div>
 
-      <accordion />
+      <accordion>Custom Content </accordion>
+      <accordion>Custom Graou </accordion>
     </section>
   </div>
 </template>

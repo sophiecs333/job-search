@@ -5,11 +5,13 @@
       data-test="clickable-area"
       @click="open"
     >
-      <h3 class="text-base font-semibold">{{ header }}</h3>
+      <h3 class="text-base font-semibold">Placeholder</h3>
       <font-awesome-icon :icon="caretIcon" />
     </div>
 
-    <div v-if="isOpen" class="w-full mt-5"></div>
+    <div v-if="isOpen" class="w-full mt-5">
+      <slot></slot>
+    </div>
   </div>
 </template>
 
