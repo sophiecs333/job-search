@@ -5,7 +5,7 @@
       data-test="clickable-area"
       @click="open"
     >
-      <h3 class="text-base font-semibold">Placeholder</h3>
+      <h3 class="text-base font-semibold">{{ header }}</h3>
       <font-awesome-icon :icon="caretIcon" />
     </div>
 
@@ -18,6 +18,12 @@
 <script>
 export default {
   name: "Accordion",
+  props: {
+    header: {
+      type: String,
+      required: true,
+    },
+  },
   data() {
     return {
       isOpen: false,

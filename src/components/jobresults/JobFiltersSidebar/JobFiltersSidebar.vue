@@ -10,7 +10,9 @@
         </div>
       </div>
 
-      <accordion>
+      <accordion header="Job types">Placeholder</accordion>
+
+      <accordion header="Organizations">
         <div class="mt-5">
           <fieldset>
             <ul class="flex flex-row flex-wrap">
