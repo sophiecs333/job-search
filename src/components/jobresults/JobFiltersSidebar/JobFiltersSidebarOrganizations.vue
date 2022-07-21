@@ -26,7 +26,7 @@
 </template>
 
 <script>
-import Accordion from "@/components/Shared/Accordion.vue";
+import Accordion from "@/components/shared/Accordion.vue";
 
 export default {
   name: "JobFiltersSidebarOrganizations",
