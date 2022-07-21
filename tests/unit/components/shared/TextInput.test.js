@@ -1,6 +1,6 @@
 import { mount } from "@vue/test-utils";
 
-import TextInput from "@/components/Shared/TextInput";
+import TextInput from "@/components/shared/TextInput";
 
 describe("TextInput", () => {
   it("communicates that user has entered character", () => {
