@@ -1,5 +1,5 @@
 import { shallowMount, flushPromises, RouterLinkStub } from "@vue/test-utils";
-import JobListings from "@/components/JobResults/JobListings.vue";
+import JobListings from "@/components/jobresults/JobListings.vue";
 
 describe("JobListings", () => {
   const createRoute = (queryParams = {}) => ({
