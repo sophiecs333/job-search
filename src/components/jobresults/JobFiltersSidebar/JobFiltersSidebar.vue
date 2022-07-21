@@ -18,6 +18,18 @@
                 <input id="VueTube" type="checkbox" class="mr-3" />
                 <label for="VueTube">VueTube</label>
               </li>
+              <li class="w-1/2 h-8">
+                <input id="Between Vue and Me" type="checkbox" class="mr-3" />
+                <label for="Between Vue and Me">Between Vue...</label>
+              </li>
+              <li class="w-1/2 h-8">
+                <input id="Vue can do it" type="checkbox" class="mr-3" />
+                <label for="Vue can do it">Vue can do it</label>
+              </li>
+              <li class="w-1/2 h-8">
+                <input id="Vue and a Half Men" type="checkbox" class="mr-3" />
+                <label for="Vue and a Half Men">Vue and a Half...</label>
+              </li>
             </ul>
           </fieldset>
         </div>
