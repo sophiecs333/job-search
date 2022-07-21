@@ -10,6 +10,8 @@
         </div>
       </div>
 
+      <accordion header="Degree" />
+
       <accordion header="Job types">Placeholder</accordion>
 
       <accordion header="Organizations">

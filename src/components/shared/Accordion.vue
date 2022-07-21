@@ -10,7 +10,7 @@
     </div>
 
     <div v-if="isOpen" class="w-full mt-5">
-      <slot></slot>
+      <slot>Oups I'm not populated!</slot>
     </div>
   </div>
 </template>
