@@ -2,7 +2,7 @@ import { mount, flushPromises } from "@vue/test-utils";
 import axios from "axios";
 jest.mock("axios");
 
-import Spotlight from "@/components/JobSearch/Spotlight.vue";
+import Spotlight from "@/components/jobsearch/Spotlight.vue";
 
 describe("Spotlight", () => {
   const mockSpotlightResponse = (data = {}) => {
