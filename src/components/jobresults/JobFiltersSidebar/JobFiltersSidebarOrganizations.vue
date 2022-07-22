@@ -8,7 +8,13 @@
             :key="organization"
             class="w-1/2 h-8"
           >
-            <input id="organization" type="checkbox" class="mr-3" />
+            <input
+              id="organization"
+              v-model="selectedOrganizations"
+              :value="organization"
+              type="checkbox"
+              class="mr-3"
+            />
             <label for="organization">{{ organization }}</label>
           </li>
         </ul>
@@ -18,6 +24,10 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex";
+
+import { UNIQUE_ORGANIZATIONS } from "@/store";
+
 import Accordion from "@/components/shared/Accordion.vue";
 
 export default {
@@ -25,10 +35,13 @@ export default {
   components: {
     Accordion,
   },
+  data() {
+    return {
+      selectedOrganizations: [],
+    };
+  },
   computed: {
-    UNIQUE_ORGANIZATIONS() {
-      return this.$store.getters.UNIQUE_ORGANIZATIONS;
-    },
+    ...mapGetters([UNIQUE_ORGANIZATIONS]),
   },
 };
 </script>
