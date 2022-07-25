@@ -60,6 +60,24 @@ describe("getters", () => {
     });
   });
 
+  describe("FILTERED_JOBS_BY_ORGANIZATIONS", () => {
+    it("identifies jobs that are associated with the given organizations", () => {
+      const state = {
+        jobs: [
+          { organization: "Google" },
+          { organization: "Amazon" },
+          { organization: "Microsoft" },
+        ],
+        selectedOrganizations: ["Google", "Microsoft"],
+      };
+
+      const result = getters.FILTERED_JOBS_BY_ORGANIZATIONS(state);
+      expect(result).toEqual([
+        { organization: "Google" },
+        { organization: "Microsoft" },
+      ]);
+    });
+
 describe("actions", () => {
   describe("FETCH_JOBS", () => {
     beforeEach(() => {
