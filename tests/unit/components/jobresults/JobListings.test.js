@@ -10,8 +10,8 @@ describe("JobListings", () => {
   });
 
   const createStore = (config = {}) => ({
-    state: {
-      jobs: Array(15).fill({}),
+    getters: {
+      FILTERED_JOBS: [],
     },
     dispatch: jest.fn(),
     ...config,
@@ -46,8 +46,8 @@ describe("JobListings", () => {
     const $route = createRoute(queryParams);
     const numberOfJobsInStore = 15;
     const $store = createStore({
-      state: {
-        jobs: Array(numberOfJobsInStore).fill({}),
+      getters: {
+        FILTERED_JOBS: Array(numberOfJobsInStore).fill({}),
       },
     });
     const wrapper = shallowMount(JobListings, createConfig($route, $store));
@@ -90,8 +90,8 @@ describe("JobListings", () => {
       const queryParams = { page: "1" };
       const $route = createRoute(queryParams);
       const $store = createStore({
-        state: {
-          jobs: Array(15).fill({}),
+        getters: {
+          FILTERED_JOBS: Array(15).fill({}),
         },
       });
       const wrapper = shallowMount(JobListings, createConfig($route, $store));
@@ -103,12 +103,11 @@ describe("JobListings", () => {
 
   describe("when user is on last page of job results", () => {
     it("does not show link to next page", async () => {
-      axios.get.mockResolvedValue({ data: Array(15).fill({}) });
       const queryParams = { page: "2" };
       const $route = createRoute(queryParams);
       const $store = createStore({
-        state: {
-          jobs: Array(15).fill({}),
+        getters: {
+          FILTERED_JOBS: Array(15).fill({}),
         },
       });
       const wrapper = shallowMount(JobListings, createConfig($route, $store));
@@ -121,8 +120,8 @@ describe("JobListings", () => {
       const queryParams = { page: "2" };
       const $route = createRoute(queryParams);
       const $store = createStore({
-        state: {
-          jobs: Array(15).fill({}),
+        getters: {
+          FILTERED_JOBS: Array(15).fill({}),
         },
       });
       const wrapper = shallowMount(JobListings, createConfig($route, $store));
