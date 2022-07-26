@@ -14,9 +14,12 @@
               :value="organization"
               type="checkbox"
               class="mr-3"
+              :data-test="organization"
               @change="selectOrganization"
             />
-            <label for="organization">{{ organization }}</label>
+            <label for="organization" data-test="organization">{{
+              organization
+            }}</label>
           </li>
         </ul>
       </fieldset>
