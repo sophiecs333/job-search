@@ -15,7 +15,9 @@
 <script>
 import { computed } from "vue";
 import { useStore } from "vuex";
-import { useRoute } from "vue-router";
+// import { useRoute } from "vue-router";
+
+import useConfirmRoute from "@/composables/useConfirmRoute";
 // import { mapGetters } from "vuex";
 // import { FILTERED_JOBS } from "@/store/constants";
 
@@ -24,8 +26,10 @@ export default {
   setup() {
     const store = useStore();
     const FILTERED_JOBS = computed(() => store.getters.FILTERED_JOBS);
-    const route = useRoute();
-    const onJobResultsPage = computed(() => route.name === "JobResults");
+
+    const onJobResultsPage = useConfirmRoute("JobResults");
+    // const route = useRoute();
+    // const onJobResultsPage = computed(() => route.name === "JobResults");
 
     return { onJobResultsPage, FILTERED_JOBS };
   },
