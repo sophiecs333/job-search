@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1658830068107" clover="3.2.0">
-  <project timestamp="1658830068108" name="All files">
-    <metrics statements="59" coveredstatements="59" conditionals="6" coveredconditionals="6" methods="27" coveredmethods="27" elements="92" coveredelements="92" complexity="0" loc="59" ncloc="59" packages="6" files="13" classes="13"/>
+<coverage generated="1659508782998" clover="3.2.0">
+  <project timestamp="1659508782998" name="All files">
+    <metrics statements="52" coveredstatements="52" conditionals="4" coveredconditionals="4" methods="22" coveredmethods="22" elements="78" coveredelements="78" complexity="0" loc="52" ncloc="52" packages="6" files="11" classes="11"/>
     <package name="api">
       <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="getJobs.js" path="/home/attilla333/code/sophiecs333/job-search/src/api/getJobs.js">
@@ -29,20 +29,7 @@
       </file>
     </package>
     <package name="components.shared">
-      <metrics statements="10" coveredstatements="10" conditionals="2" coveredconditionals="2" methods="6" coveredmethods="6"/>
-      <file name="Accordion.vue" path="/home/attilla333/code/sophiecs333/job-search/src/components/shared/Accordion.vue">
-        <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
-        <line num="19" count="3" type="stmt"/>
-        <line num="28" count="8" type="stmt"/>
-        <line num="34" count="16" type="cond" truecount="2" falsecount="0"/>
-        <line num="39" count="8" type="stmt"/>
-      </file>
-      <file name="ActionButton.vue" path="/home/attilla333/code/sophiecs333/job-search/src/components/shared/ActionButton.vue">
-        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <line num="8" count="3" type="stmt"/>
-        <line num="20" count="7" type="stmt"/>
-        <line num="26" count="3" type="stmt"/>
-      </file>
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="HeaderContainer.vue" path="/home/attilla333/code/sophiecs333/job-search/src/components/shared/HeaderContainer.vue">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="11" count="1" type="stmt"/>
