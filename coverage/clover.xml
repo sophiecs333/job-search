@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1659508782998" clover="3.2.0">
-  <project timestamp="1659508782998" name="All files">
-    <metrics statements="52" coveredstatements="52" conditionals="4" coveredconditionals="4" methods="22" coveredmethods="22" elements="78" coveredelements="78" complexity="0" loc="52" ncloc="52" packages="6" files="11" classes="11"/>
+<coverage generated="1659543627415" clover="3.2.0">
+  <project timestamp="1659543627415" name="All files">
+    <metrics statements="64" coveredstatements="64" conditionals="4" coveredconditionals="4" methods="30" coveredmethods="30" elements="98" coveredelements="98" complexity="0" loc="64" ncloc="64" packages="7" files="13" classes="13"/>
     <package name="api">
       <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="getJobs.js" path="/home/attilla333/code/sophiecs333/job-search/src/api/getJobs.js">
@@ -40,26 +40,47 @@
         <line num="28" count="5" type="stmt"/>
       </file>
     </package>
+    <package name="composables">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="useConfirmRoute.js" path="/home/attilla333/code/sophiecs333/job-search/src/composables/useConfirmRoute.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+      </file>
+    </package>
     <package name="store">
-      <metrics statements="36" coveredstatements="36" conditionals="4" coveredconditionals="4" methods="17" coveredmethods="17"/>
+      <metrics statements="45" coveredstatements="45" conditionals="4" coveredconditionals="4" methods="23" coveredmethods="23"/>
       <file name="actions.js" path="/home/attilla333/code/sophiecs333/job-search/src/store/actions.js">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="4" count="1" type="stmt"/>
         <line num="6" count="2" type="stmt"/>
         <line num="7" count="2" type="stmt"/>
       </file>
+      <file name="composables.js" path="/home/attilla333/code/sophiecs333/job-search/src/store/composables.js">
+        <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
+        <line num="10" count="5" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="15" count="5" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="20" count="5" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+      </file>
       <file name="constants.js" path="/home/attilla333/code/sophiecs333/job-search/src/store/constants.js">
         <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="2" count="8" type="stmt"/>
-        <line num="5" count="8" type="stmt"/>
-        <line num="6" count="8" type="stmt"/>
-        <line num="7" count="8" type="stmt"/>
-        <line num="10" count="8" type="stmt"/>
-        <line num="11" count="8" type="stmt"/>
-        <line num="12" count="8" type="stmt"/>
-        <line num="15" count="8" type="stmt"/>
-        <line num="16" count="8" type="stmt"/>
-        <line num="17" count="8" type="stmt"/>
+        <line num="2" count="11" type="stmt"/>
+        <line num="5" count="11" type="stmt"/>
+        <line num="6" count="11" type="stmt"/>
+        <line num="7" count="11" type="stmt"/>
+        <line num="10" count="11" type="stmt"/>
+        <line num="11" count="11" type="stmt"/>
+        <line num="12" count="11" type="stmt"/>
+        <line num="15" count="11" type="stmt"/>
+        <line num="16" count="11" type="stmt"/>
+        <line num="17" count="11" type="stmt"/>
       </file>
       <file name="getters.js" path="/home/attilla333/code/sophiecs333/job-search/src/store/getters.js">
         <metrics statements="16" coveredstatements="16" conditionals="4" coveredconditionals="4" methods="11" coveredmethods="11"/>
