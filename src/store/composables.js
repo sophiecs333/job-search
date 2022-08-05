@@ -21,3 +21,8 @@ export const useUniqueOrganizations = () => {
   const store = useStore();
   return computed(() => store.getters[UNIQUE_ORGANIZATIONS]);
 };
+
+export const useFetchJobsDispatch = () => {
+  const store = useStore();
+  store.dispatch(FETCH_JOBS);
+};
