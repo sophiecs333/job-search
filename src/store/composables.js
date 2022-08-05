@@ -5,6 +5,7 @@ import {
   FILTERED_JOBS,
   UNIQUE_JOB_TYPES,
   UNIQUE_ORGANIZATIONS,
+  FETCH_JOBS,
 } from "@/store/constants";
 
 export const useFilteredJobs = () => {

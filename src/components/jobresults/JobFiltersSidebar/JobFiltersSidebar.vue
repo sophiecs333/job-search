@@ -30,11 +30,9 @@
 <script>
 import ActionButton from "@/components/shared/ActionButton.vue";
 import Accordion from "@/components/shared/Accordion.vue";
-import JobFiltersSidebarJobTypes from "@/components/jobresults/JobFiltersSidebar/JobFiltersSidebarJobTypes.vue";
-import JobFiltersSidebarOrganizations from "@/components/jobresults/JobFiltersSidebar/JobFiltersSidebarOrganizations.vue";
 import JobFiltersSidebarCheckboxGroup from "@/components/jobresults/JobFiltersSidebar/JobFiltersSidebarCheckboxGroup.vue";
 
-import { useUniqueJobTypes, useUniqueOrganizations } from "@/stre/composables";
+import { useUniqueJobTypes, useUniqueOrganizations } from "@/store/composables";
 import {
   ADD_SELECTED_JOB_TYPES,
   ADD_SELECTED_ORGANIZATIONS,
