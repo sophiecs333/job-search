@@ -43,7 +43,8 @@
   </header>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent } from "vue";
 import { mapMutations, mapState } from "vuex";
 
 import ActionButton from "@/components/shared/ActionButton.vue";
@@ -52,7 +53,7 @@ import Subnav from "@/components/navigation/Subnav.vue";
 
 import { LOGIN_USER } from "@/store/constants";
 
-export default {
+export default defineComponent({
   name: "MainNav",
   components: {
     ActionButton,
@@ -89,5 +90,5 @@ export default {
     // },
     ...mapMutations([LOGIN_USER]),
   },
-};
+});
 </script>
