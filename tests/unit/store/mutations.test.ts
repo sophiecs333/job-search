@@ -1,28 +1,7 @@
 import mutations from "@/store/mutations";
-import state from "@/store/state";
-import { Job } from "@/api/types";
-import { GlobalState } from "@/store/types";
+import { createState, createJob } from "./utils";
 
 describe("mutations", () => {
-  const createState = (config: Partial<GlobalState> = {}): GlobalState => {
-    const initialState = state();
-    return { ...initialState, ...config };
-  };
-
-  const createJob = (config: Partial<Job>): Job => ({
-    id: 1,
-    title: "Angular Developer",
-    organization: "Vue and Me",
-    degree: "Master's",
-    jobType: "Intern",
-    locations: ["Lisbon"],
-    minimumQualifications: [],
-    preferredQualifications: [],
-    description: [],
-    dateAdded: "2021-07-04",
-    ...config,
-  });
-
   describe("LOGIN_USER", () => {
     it("logs the user in", () => {
       const startingState = createState({ isLoggedIn: false });
@@ -37,7 +16,7 @@ describe("mutations", () => {
       const jobOne = createJob();
       const jobTwo = createJob();
       mutations.RECEIVE_JOBS(startingState, [jobOne, jobTwo]);
-      expect(startingState).toEqual({ jobs: [jobOne, jobTwo] });
+      expect(startingState.jobs).toEqual([jobOne, jobTwo]);
     });
   });
 
@@ -51,9 +30,15 @@ describe("mutations", () => {
 
   describe("ADD_SELECTED_JOB_TYPES", () => {
     it("updates job types that the user has chosen to filter jobs by", () => {
-      const startingState = {createState({ selectedJobTypes: []});
-      mutations.ADD_SELECTED_JOB_TYPES(startingState, ["Full-time", "Part-time"]);
-      expect(startingState.selectedJobTypes).toEqual({ selectedJobTypes: ["Full-time", "Part-time"] });
+      const startingState = createState({ selectedJobTypes: [] });
+      mutations.ADD_SELECTED_JOB_TYPES(startingState, [
+        "Full-time",
+        "Part-time",
+      ]);
+      expect(startingState.selectedJobTypes).toEqual([
+        "Full-time",
+        "Part-time",
+      ]);
     });
   });
 });

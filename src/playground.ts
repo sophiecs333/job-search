@@ -1,23 +1,15 @@
-export const evenOrOdd = (number) => {
-  if (number % 2 === 0) {
-    return "Even";
-  } else {
-    return "Odd";
-  }
-};
-
 // Home View
-<template>
-  <hero />
-</template>
+// <template>
+//   <hero />
+// </template>
 
-<script>
-import Hero from "@/components/jobsearch/Hero.vue";
+// <script>
+// import Hero from "@/components/jobsearch/Hero.vue";
 
-export default {
-  name: "HomeView",
-  components: {
-    Hero,
-  },
-};
-</script>
+// export default {
+//   name: "HomeView",
+//   components: {
+//     Hero,
+//   },
+// };
+// </script>
