@@ -1,6 +1,6 @@
 import { ref } from "vue";
 import { shallowMount, flushPromises, RouterLinkStub } from "@vue/test-utils";
-import JobListings from "@/components/JobResults/JobListings.vue";
+import JobListings from "@/components/jobresults/JobListings.vue";
 
 import useCurrentPage from "@/composables/useCurrentPage";
 jest.mock("@/composables/useCurrentPage");
