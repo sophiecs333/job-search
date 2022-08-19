@@ -79,14 +79,14 @@ describe("MainNav", () => {
     });
   });
 
-  describe("when user logs in", () => {
+  describe("when user is logged in", () => {
     it("displays user profile picture", () => {
       const $store = {
         state: {
           isLoggedIn: true,
         },
       };
-      const wrapper = shallowMount(MainNav, createConfig());
+      const wrapper = shallowMount(MainNav, createConfig($store));
       const profileImage = wrapper.find("[data-test='profile-image']");
       expect(profileImage.exists()).toBe(true);
     });

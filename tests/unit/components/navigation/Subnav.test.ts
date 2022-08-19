@@ -36,7 +36,7 @@ describe("Subnav", () => {
   describe("when user is not on jobs page", () => {
     it("does NOT display job count", () => {
       useConfirmRouteMock.mockReturnValue(ref(false));
-      useFilteredJobsMock.mockReturnValue();
+      useFilteredJobsMock.mockReturnValue([]);
       const wrapper = mount(Subnav, createConfig());
       const jobCount = wrapper.find("[data-test='job-count']");
       expect(jobCount.exists()).toBe(false);
