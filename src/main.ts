@@ -17,7 +17,7 @@ library.add(faAngleUp);
 library.add(faSearch);
 
 createApp(App)
-  .use(store, keys)
+  .use(store, key)
   .use(router)
   .component("font-awesome-icon", FontAwesomeIcon)
   .mount("#app");

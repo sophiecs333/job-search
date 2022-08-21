@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1661097339219" clover="3.2.0">
-  <project timestamp="1661097339219" name="All files">
-    <metrics statements="215" coveredstatements="215" conditionals="12" coveredconditionals="11" methods="63" coveredmethods="62" elements="290" coveredelements="288" complexity="0" loc="215" ncloc="215" packages="10" files="26" classes="26"/>
+<coverage generated="1661098700014" clover="3.2.0">
+  <project timestamp="1661098700014" name="All files">
+    <metrics statements="217" coveredstatements="217" conditionals="12" coveredconditionals="11" methods="63" coveredmethods="62" elements="292" coveredelements="290" complexity="0" loc="217" ncloc="217" packages="10" files="26" classes="26"/>
     <package name="src.api">
       <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="getJobs.ts" path="/home/attilla333/code/sophiecs333/job-search/src/api/getJobs.ts">
         <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="1" count="3" type="stmt"/>
-        <line num="5" count="3" type="stmt"/>
+        <line num="1" count="7" type="stmt"/>
+        <line num="5" count="7" type="stmt"/>
         <line num="6" count="2" type="stmt"/>
         <line num="7" count="2" type="stmt"/>
         <line num="8" count="2" type="stmt"/>
-        <line num="11" count="3" type="stmt"/>
+        <line num="11" count="7" type="stmt"/>
       </file>
     </package>
     <package name="src.components.jobresults">
@@ -213,33 +213,34 @@
       </file>
     </package>
     <package name="src.store">
-      <metrics statements="67" coveredstatements="67" conditionals="2" coveredconditionals="2" methods="24" coveredmethods="24"/>
+      <metrics statements="68" coveredstatements="68" conditionals="2" coveredconditionals="2" methods="24" coveredmethods="24"/>
       <file name="actions.ts" path="/home/attilla333/code/sophiecs333/job-search/src/store/actions.ts">
         <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="2" count="2" type="stmt"/>
-        <line num="3" count="2" type="stmt"/>
-        <line num="9" count="2" type="stmt"/>
+        <line num="2" count="6" type="stmt"/>
+        <line num="3" count="6" type="stmt"/>
+        <line num="9" count="6" type="stmt"/>
         <line num="11" count="2" type="stmt"/>
         <line num="12" count="2" type="stmt"/>
-        <line num="16" count="2" type="stmt"/>
+        <line num="16" count="6" type="stmt"/>
       </file>
       <file name="composables.ts" path="/home/attilla333/code/sophiecs333/job-search/src/store/composables.ts">
-        <metrics statements="15" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="7"/>
+        <metrics statements="16" coveredstatements="16" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="7"/>
         <line num="1" count="4" type="stmt"/>
         <line num="2" count="4" type="stmt"/>
         <line num="4" count="4" type="stmt"/>
         <line num="13" count="4" type="stmt"/>
-        <line num="14" count="1" type="stmt"/>
-        <line num="15" count="1" type="stmt"/>
-        <line num="18" count="4" type="stmt"/>
-        <line num="19" count="1" type="stmt"/>
-        <line num="20" count="1" type="stmt"/>
-        <line num="23" count="4" type="stmt"/>
-        <line num="24" count="1" type="stmt"/>
-        <line num="25" count="1" type="stmt"/>
-        <line num="28" count="4" type="stmt"/>
-        <line num="29" count="1" type="stmt"/>
-        <line num="30" count="1" type="stmt"/>
+        <line num="15" count="4" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="20" count="4" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="25" count="4" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="30" count="4" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
       </file>
       <file name="constants.ts" path="/home/attilla333/code/sophiecs333/job-search/src/store/constants.ts">
         <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -256,8 +257,8 @@
       </file>
       <file name="getters.ts" path="/home/attilla333/code/sophiecs333/job-search/src/store/getters.ts">
         <metrics statements="18" coveredstatements="18" conditionals="2" coveredconditionals="2" methods="11" coveredmethods="11"/>
-        <line num="1" count="2" type="stmt"/>
-        <line num="17" count="2" type="stmt"/>
+        <line num="1" count="6" type="stmt"/>
+        <line num="17" count="6" type="stmt"/>
         <line num="19" count="1" type="stmt"/>
         <line num="20" count="3" type="stmt"/>
         <line num="21" count="1" type="stmt"/>
@@ -273,45 +274,46 @@
         <line num="37" count="1" type="stmt"/>
         <line num="38" count="1" type="stmt"/>
         <line num="39" count="1" type="stmt"/>
-        <line num="43" count="2" type="stmt"/>
+        <line num="43" count="6" type="stmt"/>
       </file>
       <file name="index.ts" path="/home/attilla333/code/sophiecs333/job-search/src/store/index.ts">
         <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="6" count="1" type="stmt"/>
-        <line num="7" count="1" type="stmt"/>
-        <line num="10" count="1" type="stmt"/>
-        <line num="12" count="1" type="stmt"/>
-        <line num="20" count="1" type="stmt"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="6" count="5" type="stmt"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="10" count="5" type="stmt"/>
+        <line num="12" count="5" type="stmt"/>
+        <line num="20" count="5" type="stmt"/>
       </file>
       <file name="mutations.ts" path="/home/attilla333/code/sophiecs333/job-search/src/store/mutations.ts">
         <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
-        <line num="1" count="2" type="stmt"/>
-        <line num="11" count="2" type="stmt"/>
+        <line num="1" count="6" type="stmt"/>
+        <line num="11" count="6" type="stmt"/>
         <line num="13" count="1" type="stmt"/>
         <line num="16" count="1" type="stmt"/>
         <line num="19" count="1" type="stmt"/>
         <line num="22" count="1" type="stmt"/>
-        <line num="26" count="2" type="stmt"/>
+        <line num="26" count="6" type="stmt"/>
       </file>
       <file name="state.ts" path="/home/attilla333/code/sophiecs333/job-search/src/store/state.ts">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="3" count="5" type="stmt"/>
-        <line num="4" count="15" type="stmt"/>
-        <line num="12" count="5" type="stmt"/>
+        <line num="3" count="9" type="stmt"/>
+        <line num="4" count="17" type="stmt"/>
+        <line num="12" count="9" type="stmt"/>
       </file>
     </package>
     <package name="src.utils">
-      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="nextElementInList.js" path="/home/attilla333/code/sophiecs333/job-search/src/utils/nextElementInList.js">
-        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="nextElementInList.ts" path="/home/attilla333/code/sophiecs333/job-search/src/utils/nextElementInList.ts">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="1" count="2" type="stmt"/>
         <line num="2" count="5" type="stmt"/>
         <line num="3" count="5" type="stmt"/>
         <line num="4" count="5" type="stmt"/>
         <line num="5" count="5" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
       </file>
     </package>
     <package name="tests.unit.store">
