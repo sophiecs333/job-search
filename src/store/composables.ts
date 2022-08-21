@@ -10,22 +10,24 @@ import {
 
 import { Job } from "@/api/types";
 
+import { key } from "@/store";
+
 export const useFilteredJobs = () => {
-  const store = useStore();
-  return computed(() => store.getters[FILTERED_JOBS]);
+  const store = useStore(key);
+  return computed<Job[]>(() => store.getters[FILTERED_JOBS]);
 };
 
 export const useUniqueJobTypes = () => {
-  const store = useStore();
+  const store = useStore(key);
   return computed<Set<string>>(() => store.getters[UNIQUE_JOB_TYPES]);
 };
 
 export const useUniqueOrganizations = () => {
-  const store = useStore();
+  const store = useStore(key);
   return computed<Set<string>>(() => store.getters[UNIQUE_ORGANIZATIONS]);
 };
 
 export const useFetchJobsDispatch = () => {
-  const store = useStore();
+  const store = useStore(key);
   store.dispatch(FETCH_JOBS);
 };
