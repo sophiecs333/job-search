@@ -45,17 +45,19 @@
   </main>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent } from "vue";
+
 import Headline from "@/components/jobsearch/Headline.vue";
 import JobSearchForm from "@/components/jobsearch/JobSearchForm.vue";
 import Spotlight from "@/components/jobsearch/Spotlight.vue";
 
-export default {
+export default defineComponent({
   name: "Hero",
   components: {
     Headline,
     JobSearchForm,
     Spotlight,
   },
-};
+});
 </script>
