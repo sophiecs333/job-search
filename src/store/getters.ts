@@ -1,10 +1,11 @@
 import {
   UNIQUE_ORGANIZATIONS,
   UNIQUE_JOB_TYPES,
-  UNIQUE_DEGREES;
+  UNIQUE_DEGREES,
   FILTERED_JOBS,
   INCLUDE_JOB_BY_ORGANIZATION,
   INCLUDE_JOB_BY_JOB_TYPE,
+  INCLUDE_JOB_BY_DEGREE;
 } from "@/store/constants";
 
 import { GlobalState } from "@/store/types";
@@ -36,6 +37,10 @@ const getters = {
   [INCLUDE_JOB_BY_JOB_TYPE]: (state: GlobalState) => (job: Job) => {
     if (state.selectedJobTypes.length === 0) return true;
     return state.selectedJobTypes.includes(job.jobType);
+  },
+  [INCLUDE_JOB_BY_DEGREE]: (state: GlobalState) => (job: Job) => {
+    if (state.selectedDegrees.length === 0) return true;
+    return state.selectedDegrees.includes(job.degree)
   },
   [FILTERED_JOBS](state: GlobalState, getters: IncludeJobGetters) {
     return state.jobs
