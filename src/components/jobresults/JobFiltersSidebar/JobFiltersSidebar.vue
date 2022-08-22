@@ -10,8 +10,6 @@
         </div>
       </div>
 
-      <accordion header="Degree" />
-
       <job-filters-sidebar-checkbox-group
         header="Degrees"
         :unique-values="uniqueDegrees"
@@ -40,7 +38,6 @@
 import { defineComponent } from "vue";
 
 import ActionButton from "@/components/shared/ActionButton.vue";
-import Accordion from "@/components/shared/Accordion.vue";
 import JobFiltersSidebarCheckboxGroup from "@/components/jobresults/JobFiltersSidebar/JobFiltersSidebarCheckboxGroup.vue";
 
 import {
@@ -48,6 +45,7 @@ import {
   useUniqueOrganizations,
   useUniqueDegrees,
 } from "@/store/composables";
+
 import {
   ADD_SELECTED_JOB_TYPES,
   ADD_SELECTED_ORGANIZATIONS,
@@ -58,7 +56,6 @@ export default defineComponent({
   name: "JobFiltersSidebar",
   components: {
     ActionButton,
-    Accordion,
     JobFiltersSidebarCheckboxGroup,
   },
   setup() {
