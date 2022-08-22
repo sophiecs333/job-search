@@ -5,6 +5,7 @@ import {
   useFilteredJobs,
   useUniqueJobTypes,
   useUniqueOrganizations,
+  useUniqueDegrees,
   useFetchJobsDispatch,
 } from "@/store/composables";
 // import { FILTERED_JOBS } from "@/store/constants";
@@ -48,6 +49,19 @@ describe("composables", () => {
 
       const result = useUniqueOrganizations();
       expect(result.value).toEqual(new Set(["Apple"]));
+    });
+  });
+
+  describe("useUniqueDegrees", () => {
+    it("retrieves unique degrees from store", () => {
+      useStoreMock.mockReturnValue({
+        getters: {
+          UNIQUE_DEGREES: ["Ph.D"],
+        },
+      });
+
+      const result = useUniqueDegrees();
+      expect(result.value).toEqual(["Ph.D"]);
     });
   });
 
