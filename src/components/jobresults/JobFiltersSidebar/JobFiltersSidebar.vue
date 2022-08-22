@@ -20,9 +20,9 @@
       />
 
       <job-filters-sidebar-checkbox-group
-        header="Organization"
+        header="Organizations"
         :unique-values="uniqueOrganizations"
-        :mutations="ADD_SELECTED_ORGANIZATIONS"
+        :mutation="ADD_SELECTED_ORGANIZATIONS"
         data-test="organizations-filter"
       />
     </section>
