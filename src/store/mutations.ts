@@ -29,6 +29,11 @@ const mutations = {
   [ADD_SELECTED_DEGREES](state: GlobalState, degrees: string[]) {
     state.selectedDegrees = degrees;
   },
+  [CLEAR_USER_JOB_FILTER_SELECTIONS](state: GlobalState, jobTypes: string[]) {
+    state.selectedOrganizations = [];
+    state.selectedJobTypes = [];
+    state.selectedDegrees = [];
+  },
 };
 
 export default mutations;
