@@ -25,28 +25,28 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>22/22</span>
+                <span class='fraction'>29/29</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>2/2</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>11/11</span>
+                <span class='fraction'>16/16</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>18/18</span>
+                <span class='fraction'>23/23</span>
             </div>
         
             
@@ -106,7 +106,18 @@
 <a name='L41'></a><a href='#L41'>41</a>
 <a name='L42'></a><a href='#L42'>42</a>
 <a name='L43'></a><a href='#L43'>43</a>
-<a name='L44'></a><a href='#L44'>44</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">6x</span>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">11x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -122,7 +133,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">3x</span>
@@ -133,6 +147,9 @@
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -141,20 +158,27 @@
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">11x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import {
   UNIQUE_ORGANIZATIONS,
   UNIQUE_JOB_TYPES,
+  UNIQUE_DEGREES,
   FILTERED_JOBS,
   INCLUDE_JOB_BY_ORGANIZATION,
   INCLUDE_JOB_BY_JOB_TYPE,
+  INCLUDE_JOB_BY_DEGREE,
 } from "@/store/constants";
 &nbsp;
 import { GlobalState } from "@/store/types";
@@ -163,6 +187,7 @@ import { Job } from "@/api/types";
 interface IncludeJobGetters {
   INCLUDE_JOB_BY_ORGANIZATION: (job: Job) =&gt; boolean;
   INCLUDE_JOB_BY_JOB_TYPE: (job: Job) =&gt; boolean;
+  INCLUDE_JOB_BY_DEGREE: (job: Job) =&gt; boolean;
 }
 &nbsp;
 const getters = {
@@ -176,6 +201,9 @@ const getters = {
     state.jobs.forEach((job) =&gt; uniqueJobTypes.add(job.jobType));
     return uniqueJobTypes;
   },
+  [UNIQUE_DEGREES](state: GlobalState) {
+    return state.degrees.map((degree) =&gt; degree.degree);
+  },
   [INCLUDE_JOB_BY_ORGANIZATION]: (state: GlobalState) =&gt; (job: Job) =&gt; {
     if (state.selectedOrganizations.length === 0) return true;
     return state.selectedOrganizations.includes(job.organization);
@@ -184,10 +212,15 @@ const getters = {
     if (state.selectedJobTypes.length === 0) return true;
     return state.selectedJobTypes.includes(job.jobType);
   },
+  [INCLUDE_JOB_BY_DEGREE]: (state: GlobalState) =&gt; (job: Job) =&gt; {
+    if (state.selectedDegrees.length === 0) return true;
+    return state.selectedDegrees.includes(job.degree);
+  },
   [FILTERED_JOBS](state: GlobalState, getters: IncludeJobGetters) {
     return state.jobs
       .filter((job) =&gt; getters.INCLUDE_JOB_BY_ORGANIZATION(job))
-      .filter((job) =&gt; getters.INCLUDE_JOB_BY_JOB_TYPE(job));
+      .filter((job) =&gt; getters.INCLUDE_JOB_BY_JOB_TYPE(job))
+      .filter((job) =&gt; getters.INCLUDE_JOB_BY_DEGREE(job));
   },
 };
 &nbsp;
@@ -199,7 +232,7 @@ export default getters;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Mon Aug 22 2022 10:34:03 GMT+0200 (Central European Summer Time)
+                at Tue Aug 23 2022 11:45:49 GMT+0200 (Central European Summer Time)
             </div>
         <script src="../../prettify.js"></script>
         <script>

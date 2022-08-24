@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">25% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>8/8</span>
+                <span class='fraction'>3/12</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>5/5</span>
+                <span class='fraction'>0/7</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">25% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>8/8</span>
+                <span class='fraction'>3/12</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -93,7 +93,17 @@
 <a name='L28'></a><a href='#L28'>28</a>
 <a name='L29'></a><a href='#L29'>29</a>
 <a name='L30'></a><a href='#L30'>30</a>
-<a name='L31'></a><a href='#L31'>31</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">6x</span>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">10x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -104,51 +114,71 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">10x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import {
   LOGIN_USER,
   RECEIVE_DEGREES,
   RECEIVE_JOBS,
   ADD_SELECTED_ORGANIZATIONS,
   ADD_SELECTED_JOB_TYPES,
+  ADD_SELECTED_DEGREES,
+  CLEAR_USER_JOB_FILTER_SELECTIONS,
 } from "@/store/constants";
 &nbsp;
 import { GlobalState } from "@/store/types";
 import { Degree, Job } from "@/api/types";
 &nbsp;
 const mutations = {
-  [LOGIN_USER](state: GlobalState) {
-    state.isLoggedIn = true;
+<span class="fstat-no" title="function not covered" >  [L</span>OGIN_USER](state: GlobalState) {
+<span class="cstat-no" title="statement not covered" >    state.</span>isLoggedIn = true;
   },
-  [RECEIVE_JOBS](state: GlobalState, jobs: Job[]) {
-    state.jobs = jobs;
+<span class="fstat-no" title="function not covered" >  [R</span>ECEIVE_JOBS](state: GlobalState, jobs: Job[]) {
+<span class="cstat-no" title="statement not covered" >    state.</span>jobs = jobs;
   },
-  [RECEIVE_DEGREES](state: GlobalState, degrees: Degree[]) {
-    state.degrees = degrees;
+<span class="fstat-no" title="function not covered" >  [R</span>ECEIVE_DEGREES](state: GlobalState, degrees: Degree[]) {
+<span class="cstat-no" title="statement not covered" >    state.</span>degrees = degrees;
   },
-  [ADD_SELECTED_ORGANIZATIONS](state: GlobalState, organizations: string[]) {
-    state.selectedOrganizations = organizations;
+<span class="fstat-no" title="function not covered" >  [A</span>DD_SELECTED_ORGANIZATIONS](state: GlobalState, organizations: string[]) {
+<span class="cstat-no" title="statement not covered" >    state.</span>selectedOrganizations = organizations;
   },
-  [ADD_SELECTED_JOB_TYPES](state: GlobalState, jobTypes: string[]) {
-    state.selectedJobTypes = jobTypes;
+<span class="fstat-no" title="function not covered" >  [A</span>DD_SELECTED_JOB_TYPES](state: GlobalState, jobTypes: string[]) {
+<span class="cstat-no" title="statement not covered" >    state.</span>selectedJobTypes = jobTypes;
+  },
+<span class="fstat-no" title="function not covered" >  [A</span>DD_SELECTED_DEGREES](state: GlobalState, degrees: string[]) {
+<span class="cstat-no" title="statement not covered" >    state.</span>selectedDegrees = degrees;
+  },
+<span class="fstat-no" title="function not covered" >  [C</span>LEAR_USER_JOB_FILTER_SELECTIONS](state: GlobalState, jobTypes: string[]) {
+<span class="cstat-no" title="statement not covered" >    state.</span>selectedOrganizations = [];
+<span class="cstat-no" title="statement not covered" >    state.</span>selectedJobTypes = [];
+<span class="cstat-no" title="statement not covered" >    state.</span>selectedDegrees = [];
   },
 };
 &nbsp;
@@ -160,7 +190,7 @@ export default mutations;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Mon Aug 22 2022 10:34:03 GMT+0200 (Central European Summer Time)
+                at Tue Aug 23 2022 11:45:49 GMT+0200 (Central European Summer Time)
             </div>
         <script src="../../prettify.js"></script>
         <script>
