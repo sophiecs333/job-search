@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for src/components/jobresults/JobFiltersSidebar/JobFiltersSidebarDegrees.vue</title>
+    <title>Code coverage report for src/components/jobresults/JobFiltersSidebar/JobFiltersSidebarJobTypes.vue</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../../../prettify.css" />
     <link rel="stylesheet" href="../../../../base.css" />
@@ -19,7 +19,7 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../../../index.html">All files</a> / <a href="index.html">src/components/jobresults/JobFiltersSidebar</a> JobFiltersSidebarDegrees.vue</h1>
+        <h1><a href="../../../../index.html">All files</a> / <a href="index.html">src/components/jobresults/JobFiltersSidebar</a> JobFiltersSidebarJobTypes.vue</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
@@ -119,28 +119,28 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&lt;template&gt;
   &lt;job-filters-sidebar-checkbox-group
-    :unique-values="uniqueDegrees"
-    :mutation="ADD_SELECTED_DEGREES"
-    data-test="degrees-filter"
+    :unique-values="uniqueJobTypes"
+    :mutation="ADD_SELECTED_JOB_TYPES"
+    data-test="job-types-filter"
   /&gt;
 &lt;/template&gt;
 &nbsp;
 &lt;script lang="ts"&gt;
 import { defineComponent } from "vue";
 &nbsp;
-import { useUniqueDegrees } from "@/store/composables";
-import { ADD_SELECTED_DEGREES } from "@/store/constants";
+import { useUniqueJobTypes } from "@/store/composables";
+import { ADD_SELECTED_JOB_TYPES } from "@/store/constants";
 &nbsp;
 import JobFiltersSidebarCheckboxGroup from "@/components/jobresults/JobFiltersSidebar/JobFiltersSidebarCheckboxGroup.vue";
 &nbsp;
 export default defineComponent({
-  name: "JobFiltersSidebarDegrees",
+  name: "JobFiltersSidebarJobTypes",
   components: {
     JobFiltersSidebarCheckboxGroup,
   },
   setup() {
-    const uniqueDegrees = useUniqueDegrees();
-    return { uniqueDegrees, ADD_SELECTED_DEGREES };
+    const uniqueJobTypes = useUniqueJobTypes();
+    return { uniqueJobTypes, ADD_SELECTED_JOB_TYPES };
   },
 });
 &lt;/script&gt;

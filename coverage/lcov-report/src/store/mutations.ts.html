@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">25% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>3/12</span>
+                <span class='fraction'>14/14</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/7</span>
+                <span class='fraction'>8/8</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">25% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>3/12</span>
+                <span class='fraction'>14/14</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -103,7 +103,12 @@
 <a name='L38'></a><a href='#L38'>38</a>
 <a name='L39'></a><a href='#L39'>39</a>
 <a name='L40'></a><a href='#L40'>40</a>
-<a name='L41'></a><a href='#L41'>41</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">10x</span>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">15x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -116,40 +121,46 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">10x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">15x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">15x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import {
   LOGIN_USER,
-  RECEIVE_DEGREES,
   RECEIVE_JOBS,
+  RECEIVE_DEGREES,
   ADD_SELECTED_ORGANIZATIONS,
   ADD_SELECTED_JOB_TYPES,
   ADD_SELECTED_DEGREES,
+  UPDATE_SKILLS_SEARCH_TERM,
   CLEAR_USER_JOB_FILTER_SELECTIONS,
 } from "@/store/constants";
 &nbsp;
@@ -157,28 +168,32 @@ import { GlobalState } from "@/store/types";
 import { Degree, Job } from "@/api/types";
 &nbsp;
 const mutations = {
-<span class="fstat-no" title="function not covered" >  [L</span>OGIN_USER](state: GlobalState) {
-<span class="cstat-no" title="statement not covered" >    state.</span>isLoggedIn = true;
+  [LOGIN_USER](state: GlobalState) {
+    state.isLoggedIn = true;
   },
-<span class="fstat-no" title="function not covered" >  [R</span>ECEIVE_JOBS](state: GlobalState, jobs: Job[]) {
-<span class="cstat-no" title="statement not covered" >    state.</span>jobs = jobs;
+  [RECEIVE_JOBS](state: GlobalState, jobs: Job[]) {
+    state.jobs = jobs;
   },
-<span class="fstat-no" title="function not covered" >  [R</span>ECEIVE_DEGREES](state: GlobalState, degrees: Degree[]) {
-<span class="cstat-no" title="statement not covered" >    state.</span>degrees = degrees;
+  [RECEIVE_DEGREES](state: GlobalState, degrees: Degree[]) {
+    state.degrees = degrees;
   },
-<span class="fstat-no" title="function not covered" >  [A</span>DD_SELECTED_ORGANIZATIONS](state: GlobalState, organizations: string[]) {
-<span class="cstat-no" title="statement not covered" >    state.</span>selectedOrganizations = organizations;
+  [ADD_SELECTED_ORGANIZATIONS](state: GlobalState, organizations: string[]) {
+    state.selectedOrganizations = organizations;
   },
-<span class="fstat-no" title="function not covered" >  [A</span>DD_SELECTED_JOB_TYPES](state: GlobalState, jobTypes: string[]) {
-<span class="cstat-no" title="statement not covered" >    state.</span>selectedJobTypes = jobTypes;
+  [ADD_SELECTED_JOB_TYPES](state: GlobalState, jobTypes: string[]) {
+    state.selectedJobTypes = jobTypes;
   },
-<span class="fstat-no" title="function not covered" >  [A</span>DD_SELECTED_DEGREES](state: GlobalState, degrees: string[]) {
-<span class="cstat-no" title="statement not covered" >    state.</span>selectedDegrees = degrees;
+  [ADD_SELECTED_DEGREES](state: GlobalState, degrees: string[]) {
+    state.selectedDegrees = degrees;
   },
-<span class="fstat-no" title="function not covered" >  [C</span>LEAR_USER_JOB_FILTER_SELECTIONS](state: GlobalState, jobTypes: string[]) {
-<span class="cstat-no" title="statement not covered" >    state.</span>selectedOrganizations = [];
-<span class="cstat-no" title="statement not covered" >    state.</span>selectedJobTypes = [];
-<span class="cstat-no" title="statement not covered" >    state.</span>selectedDegrees = [];
+  [UPDATE_SKILLS_SEARCH_TERM](state: GlobalState, skillsSearchTerm: string) {
+    state.skillsSearchTerm = skillsSearchTerm;
+  },
+  [CLEAR_USER_JOB_FILTER_SELECTIONS](state: GlobalState) {
+    state.selectedOrganizations = [];
+    state.selectedJobTypes = [];
+    state.selectedDegrees = [];
+    state.skillsSearchTerm = "";
   },
 };
 &nbsp;
@@ -190,7 +205,7 @@ export default mutations;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Tue Aug 23 2022 11:45:49 GMT+0200 (Central European Summer Time)
+                at 2022-08-24T19:03:47.651Z
             </div>
         <script src="../../prettify.js"></script>
         <script>
