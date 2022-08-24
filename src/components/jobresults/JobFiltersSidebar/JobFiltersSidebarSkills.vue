@@ -1,4 +1,4 @@
-<!-- src/components/JobResults/JobFiltersSidebar/JobFiltersSidebarSkills.vue -->
+<!-- src/components/jobresults/JobFiltersSidebar/JobFiltersSidebarSkills.vue -->
 <template>
   <div class="mt-5">
     <input

@@ -12,7 +12,7 @@ import { defineComponent } from "vue";
 import { useUniqueJobTypes } from "@/store/composables";
 import { ADD_SELECTED_JOB_TYPES } from "@/store/constants";
 
-import JobFiltersSidebarCheckboxGroup from "@/components/JobResults/JobFiltersSidebar/JobFiltersSidebarCheckboxGroup.vue";
+import JobFiltersSidebarCheckboxGroup from "@/components/jobresults/JobFiltersSidebar/JobFiltersSidebarCheckboxGroup.vue";
 
 export default defineComponent({
   name: "JobFiltersSidebarJobTypes",
